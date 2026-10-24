@@ -58,18 +58,18 @@ h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:
   background:radial-gradient(circle at 70% 30%,#4a3412,#15120d 70%);
 }
 .thumb.crudo span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--crudo);letter-spacing:-.02em}
-.thumb.crudo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left}
 .thumb.taxable{
   display:grid;place-items:center;
   background:radial-gradient(circle at 30% 30%,#1f4a3c,#121a1f 70%);
 }
-.thumb.taxable span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--taxable);letter-spacing:-.02em}
+.thumb.taxable span{font:700 clamp(30px,5vw,48px) "Space Grotesk",sans-serif;color:var(--taxable);letter-spacing:-.02em}
 .thumb.taxable small{display:block;font:500 13px "IBM Plex Mono",monospace;color:var(--muted);text-align:center;letter-spacing:.2em}
 .thumb.gazette{
   display:grid;place-items:center;
   background:radial-gradient(circle at 50% 30%,#4a1f1c,#15100f 70%);
 }
-.thumb.gazette span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--gazette);letter-spacing:-.02em}
+.thumb.gazette span{font:700 clamp(30px,5vw,48px) "Space Grotesk",sans-serif;color:var(--gazette);letter-spacing:-.02em}
 .soon-cta::after{content:none}
 .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .tag{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
@@ -124,7 +124,7 @@ html[lang="en"] [data-en]{display:revert}
     </a>
 
     <a class="card" href="/gazettepro/" style="--c:var(--gazette)">
-      <div class="thumb gazette" aria-hidden="true"><span>GazettePro</span></div>
+      <div class="thumb gazette"><span aria-hidden="true">GazettePro</span><img src="https://abaxgrid.com/gazettepro/assets/share-gazettepro.jpg" alt="GazettePro: línea de tiempo normativa" loading="lazy" onerror="this.remove()"></div>
       <div class="body">
         <span class="tag"><span data-es>Investigación · Legislación tributaria</span><span data-en>Research · Tax law</span></span>
         <h2>GazettePro</h2>
@@ -137,7 +137,7 @@ html[lang="en"] [data-en]{display:revert}
     </a>
 
     <a class="card" href="/taxableapp/" style="--c:var(--taxable)">
-      <div class="thumb taxable" aria-hidden="true"><div><span>TaxableApp</span></div></div>
+      <div class="thumb taxable"><span aria-hidden="true">TaxableApp</span><img src="https://abaxgrid.com/taxableapp/assets/share-taxable.jpg" alt="TaxableApp: inicio" loading="lazy" onerror="this.remove()"></div>
       <div class="body">
         <span class="tag"><span data-es>App · Impuestos y finanzas</span><span data-en>App · Tax &amp; finance</span></span>
         <h2>TaxableApp</h2>
