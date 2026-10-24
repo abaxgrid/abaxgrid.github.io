@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AbaxGrid · Simuladores y herramientas</title>
+<meta name="description" content="AbaxGrid builds business simulators and tax tools for Latin America: CRUDO, the oil value chain simulator, and TaxableApp, tax and finance tools.">
+<meta property="og:title" content="AbaxGrid">
+<meta property="og:description" content="Business simulators and tax tools for Latin America.">
+<meta property="og:url" content="https://abaxgrid.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://abaxgrid.com/playcrudo/assets/share-firstoil.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1014; --panel:#151a21; --line:#232b35; --text:#e9edf2; --muted:#8b96a5;
+  --crudo:#e0a33a; --taxable:#3fbf8f; --gazette:#e5736a; --accent:#7aa7ff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:"Space Grotesk",system-ui,sans-serif; line-height:1.5;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:48px 48px; background-position:-1px -1px;
+  min-height:100vh;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:.02em;text-decoration:none;color:var(--text)}
+.mark{width:28px;height:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.mark i{background:var(--text);border-radius:1px}
+.mark i:nth-child(2),.mark i:nth-child(4),.mark i:nth-child(9){background:var(--accent)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--panel)}
+.lang button{font:500 13px "IBM Plex Mono",monospace;color:var(--muted);background:none;border:0;padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.hero{padding:56px 0 40px}
+.eyebrow{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:14ch}
+.serious{font-style:normal;color:var(--accent)}
+.lead{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:56ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:24px 0 56px}
+.card{
+  display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);
+  border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
+  transition:transform .15s ease,border-color .15s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:var(--c)}
+.card:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.thumb{aspect-ratio:1200/630;background:#1b2028 center/cover no-repeat;position:relative}
+.thumb.crudo{
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 70% 30%,#4a3412,#15120d 70%);
+}
+.thumb.crudo span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--crudo);letter-spacing:-.02em}
+.thumb.crudo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb.taxable{
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 30%,#1f4a3c,#121a1f 70%);
+}
+.thumb.taxable span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--taxable);letter-spacing:-.02em}
+.thumb.taxable small{display:block;font:500 13px "IBM Plex Mono",monospace;color:var(--muted);text-align:center;letter-spacing:.2em}
+.thumb.gazette{
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 50% 30%,#4a1f1c,#15100f 70%);
+}
+.thumb.gazette span{font:700 clamp(40px,8vw,64px) "Space Grotesk",sans-serif;color:var(--gazette);letter-spacing:-.02em}
+.soon-cta::after{content:none}
+.body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+.card h2{font-size:24px;line-height:1.15}
+.card p{color:var(--muted);font-size:15px}
+.cta{margin-top:auto;padding-top:8px;font-weight:500;color:var(--c)}
+.cta::after{content:" →"}
+.soon{border-style:dashed;justify-content:center;padding:28px 22px;--c:var(--accent)}
+.soon h2{font-size:20px}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+footer a{color:var(--muted)}
+[data-en]{display:none}
+html[lang="en"] [data-es]{display:none}
+html[lang="en"] [data-en]{display:revert}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="/" aria-label="AbaxGrid">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      AbaxGrid
+    </a>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-set="es" aria-pressed="true">ES</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow"><span data-es>Simuladores · Herramientas fiscales</span><span data-en>Simulators · Tax tools</span></p>
+    <h1><span data-es>Modelos de negocio que puedes jugar. <em class="serious">Seriamente.</em></span><span data-en>Business models you can play. <em class="serious">Seriously.</em></span></h1>
+    <p class="lead">
+      <span data-es>AbaxGrid construye simuladores de negocio y herramientas fiscales para América Latina: decisiones reales, números reales, directo en el navegador.</span>
+      <span data-en>AbaxGrid builds business simulators and tax tools for Latin America: real decisions, real numbers, right in your browser.</span>
+    </p>
+  </section>
+
+  <main class="grid">
+    <a class="card" href="/playcrudo/" style="--c:var(--crudo)">
+      <div class="thumb crudo"><span aria-hidden="true">CRUDO</span><img src="https://abaxgrid.com/playcrudo/assets/share-firstoil.jpg" alt="CRUDO: First Oil" loading="lazy" onerror="this.remove()"></div>
+      <div class="body">
+        <span class="tag"><span data-es>Simulador · Petróleo y gas</span><span data-en>Simulator · Oil &amp; gas</span></span>
+        <h2>CRUDO: First Oil</h2>
+        <p>
+          <span data-es>Perfora, mejora, transporta y vende crudo del Orinoco a través de términos fiscales, sanciones y el escrutinio de inversionistas, durante 36 trimestres.</span>
+          <span data-en>Drill, upgrade, ship and sell Orinoco crude through fiscal terms, sanctions and investor scrutiny, over 36 quarters.</span>
+        </p>
+        <span class="cta"><span data-es>Jugar ahora</span><span data-en>Play now</span></span>
+      </div>
+    </a>
+
+    <a class="card" href="/taxableapp/" style="--c:var(--taxable)">
+      <div class="thumb taxable" aria-hidden="true"><div><span>TaxableApp</span></div></div>
+      <div class="body">
+        <span class="tag"><span data-es>App · Impuestos y finanzas</span><span data-en>App · Tax &amp; finance</span></span>
+        <h2>TaxableApp</h2>
+        <p>
+          <span data-es>Calculadoras de impuestos, calendario fiscal, ITBMS, planilla, impuestos municipales y más, en español e inglés. Prototipo.</span>
+          <span data-en>Tax calculators, a tax calendar, ITBMS, payroll, municipal taxes and more, in Spanish and English. Prototype.</span>
+        </p>
+        <span class="cta"><span data-es>Abrir la app</span><span data-en>Open the app</span></span>
+      </div>
+    </a>
+
+    <div class="card" style="--c:var(--gazette)">
+      <div class="thumb gazette" aria-hidden="true"><span>GazettePro</span></div>
+      <div class="body">
+        <span class="tag"><span data-es>Investigación · Legislación tributaria</span><span data-en>Research · Tax law</span></span>
+        <h2>GazettePro</h2>
+        <p>
+          <span data-es>Legislación tributaria venezolana en un solo corpus: Gacetas Oficiales, leyes y reglamentos, listos para investigar.</span>
+          <span data-en>Venezuelan tax law in one corpus: official gazettes, laws and regulations, ready to research.</span>
+        </p>
+        <span class="cta soon-cta"><span data-es>Próximamente</span><span data-en>Coming soon</span></span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span>© <span id="y">2026</span> AbaxGrid · Danny Peña</span>
+    <a href="https://github.com/abaxgrid">GitHub</a>
+  </footer>
+</div>
+<script>
+(function(){
+  var root=document.documentElement, btns=document.querySelectorAll('.lang button');
+  function set(l){
+    root.lang=l;
+    btns.forEach(function(b){b.setAttribute('aria-pressed', b.dataset.set===l ? 'true':'false');});
+    try{localStorage.setItem('abax-lang',l);}catch(e){}
+  }
+  var saved=null; try{saved=localStorage.getItem('abax-lang');}catch(e){}
+  set(saved || ((navigator.language||'es').slice(0,2)==='en' ? 'en' : 'es'));
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
+  document.getElementById('y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
