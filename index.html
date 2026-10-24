@@ -81,9 +81,9 @@ h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:
 .soon h2{font-size:20px}
 footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 footer a{color:var(--muted)}
-[data-en]{display:none}
-html[lang="en"] [data-es]{display:none}
-html[lang="en"] [data-en]{display:revert}
+[data-en],[data-pt]{display:none}
+html[lang="en"] [data-es],html[lang="pt"] [data-es]{display:none}
+html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
 @media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
 </style>
 </head>
@@ -94,18 +94,19 @@ html[lang="en"] [data-en]{display:revert}
       <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
       AbaxGrid
     </a>
-    <div class="lang" role="group" aria-label="Idioma / Language">
+    <div class="lang" role="group" aria-label="Idioma / Language / Idioma">
       <button type="button" data-set="es" aria-pressed="true">ES</button>
       <button type="button" data-set="en" aria-pressed="false">EN</button>
+      <button type="button" data-set="pt" aria-pressed="false">PT</button>
     </div>
   </header>
 
   <section class="hero">
-    <p class="eyebrow"><span data-es>Simuladores · Investigación legal · Gestión tributaria</span><span data-en>Simulators · Legal research · Tax management</span></p>
-    <h1><span data-es>Simula. Investiga. <em class="serious">Cumple.</em></span><span data-en>Simulate. Research. <em class="serious">Comply.</em></span></h1>
+    <p class="eyebrow"><span data-es>Simuladores · Investigación legal · Gestión tributaria</span><span data-en>Simulators · Legal research · Tax management</span><span data-pt>Simuladores · Pesquisa jurídica · Gestão tributária</span></p>
+    <h1><span data-es>Simula. Investiga. <em class="serious">Cumple.</em></span><span data-en>Simulate. Research. <em class="serious">Comply.</em></span><span data-pt>Simule. Pesquise. <em class="serious">Cumpra.</em></span></h1>
     <p class="lead">
       <span data-es>Simuladores de negocio, investigación legal y gestión tributaria para América Latina. Decisiones reales, con la ley y los números a la vista.</span>
-      <span data-en>Business simulators, legal research and tax management for Latin America. Real decisions, with the law and the numbers in plain sight.</span>
+      <span data-en>Business simulators, legal research and tax management for Latin America. Real decisions, with the law and the numbers in plain sight.</span><span data-pt>Simuladores de negócios, pesquisa jurídica e gestão tributária para a América Latina. Decisões reais, com a lei e os números à vista.</span>
     </p>
   </section>
 
@@ -113,39 +114,39 @@ html[lang="en"] [data-en]{display:revert}
     <a class="card" href="/playcrudo/" style="--c:var(--crudo)">
       <div class="thumb crudo"><span aria-hidden="true">CRUDO</span><img src="https://abaxgrid.com/playcrudo/assets/share-firstoil.jpg" alt="CRUDO: First Oil" loading="lazy" onerror="this.remove()"></div>
       <div class="body">
-        <span class="tag"><span data-es>Simulador · Petróleo y gas</span><span data-en>Simulator · Oil &amp; gas</span></span>
+        <span class="tag"><span data-es>Simulador · Petróleo y gas</span><span data-en>Simulator · Oil &amp; gas</span><span data-pt>Simulador · Petróleo e gás</span></span>
         <h2>CRUDO: First Oil</h2>
         <p>
           <span data-es>Perfora, mejora, transporta y vende crudo del Orinoco a través de términos fiscales, sanciones y el escrutinio de inversionistas, durante 36 trimestres.</span>
-          <span data-en>Drill, upgrade, ship and sell Orinoco crude through fiscal terms, sanctions and investor scrutiny, over 36 quarters.</span>
+          <span data-en>Drill, upgrade, ship and sell Orinoco crude through fiscal terms, sanctions and investor scrutiny, over 36 quarters.</span><span data-pt>Perfure, melhore, transporte e venda petróleo do Orinoco entre regimes fiscais, sanções e o escrutínio de investidores, ao longo de 36 trimestres.</span>
         </p>
-        <span class="cta"><span data-es>Jugar ahora</span><span data-en>Play now</span></span>
+        <span class="cta"><span data-es>Jugar ahora</span><span data-en>Play now</span><span data-pt>Jogar agora</span></span>
       </div>
     </a>
 
     <a class="card" href="/gazettepro/" style="--c:var(--gazette)">
       <div class="thumb gazette"><span aria-hidden="true">GazettePro</span><img src="https://abaxgrid.com/gazettepro/assets/share-gazettepro.jpg" alt="GazettePro: línea de tiempo normativa" loading="lazy" onerror="this.remove()"></div>
       <div class="body">
-        <span class="tag"><span data-es>Investigación · Legislación tributaria</span><span data-en>Research · Tax law</span></span>
+        <span class="tag"><span data-es>Investigación · Legislación tributaria</span><span data-en>Research · Tax law</span><span data-pt>Pesquisa · Legislação tributária</span></span>
         <h2>GazettePro</h2>
         <p>
           <span data-es>Legislación tributaria venezolana en un solo corpus: Gacetas Oficiales, leyes y reglamentos, listos para investigar.</span>
-          <span data-en>Venezuelan tax law in one corpus: official gazettes, laws and regulations, ready to research.</span>
+          <span data-en>Venezuelan tax law in one corpus: official gazettes, laws and regulations, ready to research.</span><span data-pt>A legislação tributária venezuelana num só acervo: gazetas oficiais, leis e regulamentos, prontos para pesquisar.</span>
         </p>
-        <span class="cta"><span data-es>Solicitar prueba</span><span data-en>Request a trial</span></span>
+        <span class="cta"><span data-es>Probar ahora</span><span data-en>Try it now</span><span data-pt>Experimentar agora</span></span>
       </div>
     </a>
 
     <a class="card" href="/taxableapp/" style="--c:var(--taxable)">
       <div class="thumb taxable"><span aria-hidden="true">TaxableApp</span><img src="https://abaxgrid.com/taxableapp/assets/share-taxable.jpg" alt="TaxableApp: inicio" loading="lazy" onerror="this.remove()"></div>
       <div class="body">
-        <span class="tag"><span data-es>App · Impuestos y finanzas</span><span data-en>App · Tax &amp; finance</span></span>
+        <span class="tag"><span data-es>App · Impuestos y finanzas</span><span data-en>App · Tax &amp; finance</span><span data-pt>App · Impostos e finanças</span></span>
         <h2>TaxableApp</h2>
         <p>
           <span data-es>Calculadoras de impuestos, calendario fiscal, ITBMS, planilla, impuestos municipales y más, en español e inglés. Prototipo.</span>
-          <span data-en>Tax calculators, a tax calendar, ITBMS, payroll, municipal taxes and more, in Spanish and English. Prototype.</span>
+          <span data-en>Tax calculators, a tax calendar, ITBMS, payroll, municipal taxes and more, in Spanish and English. Prototype.</span><span data-pt>Calculadoras de impostos, calendário fiscal, ITBMS, folha de pagamento, impostos municipais e mais, em espanhol e inglês. Protótipo.</span>
         </p>
-        <span class="cta"><span data-es>Abrir la app</span><span data-en>Open the app</span></span>
+        <span class="cta"><span data-es>Abrir la app</span><span data-en>Open the app</span><span data-pt>Abrir o app</span></span>
       </div>
     </a>
   </main>
@@ -164,7 +165,8 @@ html[lang="en"] [data-en]{display:revert}
     try{localStorage.setItem('abax-lang',l);}catch(e){}
   }
   var saved=null; try{saved=localStorage.getItem('abax-lang');}catch(e){}
-  set(saved || ((navigator.language||'es').slice(0,2)==='en' ? 'en' : 'es'));
+  var nav=(navigator.language||'es').slice(0,2);
+  set(['es','en','pt'].indexOf(saved)>-1 ? saved : (nav==='en'||nav==='pt' ? nav : 'es'));
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
   document.getElementById('y').textContent=new Date().getFullYear();
 })();
