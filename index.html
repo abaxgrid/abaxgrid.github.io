@@ -79,6 +79,23 @@ h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:
 .cta::after{content:" →"}
 .soon{border-style:dashed;justify-content:center;padding:28px 22px;--c:var(--accent)}
 .soon h2{font-size:20px}
+.band{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px;padding:40px 0;border-top:1px solid var(--line);align-items:start}
+.band h2{font-size:clamp(26px,4vw,38px);line-height:1.1;text-wrap:balance;margin:10px 0 0}
+.band .lead{margin-top:14px}
+.offer{display:grid;gap:12px}
+.offer li{list-style:none;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:grid;gap:4px}
+.offer{margin:0;padding:0}
+.offer b{font-size:17px}
+.offer li>span{color:var(--muted);font-size:15px}
+.offer b{color:var(--text)}
+.cta-btn{display:inline-block;margin-top:20px;font-weight:500;text-decoration:none;color:var(--bg);background:var(--accent);border-radius:999px;padding:10px 18px}
+.cta-btn:hover{filter:brightness(1.08)}
+.cta-btn:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+.mail{display:block;margin-top:10px;font:500 13px "IBM Plex Mono",monospace;color:var(--muted);user-select:all}
+.about p:not(.eyebrow){color:var(--muted);font-size:16px;max-width:60ch}
+.about p+p{margin-top:12px}
+.about b{color:var(--text);font-weight:500}
+@media (max-width:760px){.band{grid-template-columns:minmax(0,1fr);gap:18px}}
 footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 footer a{color:var(--muted)}
 [data-en],[data-pt]{display:none}
@@ -151,8 +168,46 @@ html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
     </a>
   </main>
 
+  <section class="band" id="soluciones" aria-labelledby="sol-h">
+    <div>
+      <p class="eyebrow"><span data-es>Soluciones a la medida</span><span data-en>Custom solutions</span><span data-pt>Soluções sob medida</span></p>
+      <h2 id="sol-h"><span data-es>Diseñamos la herramienta que tu negocio necesita.</span><span data-en>We design the tool your business needs.</span><span data-pt>Projetamos a ferramenta de que o seu negócio precisa.</span></h2>
+      <p class="lead">
+        <span data-es>Con la misma base de CRUDO, GazettePro y TaxableApp, construimos soluciones para tu empresa, tu sector o tu jurisdicción.</span>
+        <span data-en>On the same foundation as CRUDO, GazettePro and TaxableApp, we build solutions for your company, your sector or your jurisdiction.</span>
+        <span data-pt>Com a mesma base do CRUDO, GazettePro e TaxableApp, construímos soluções para a sua empresa, o seu setor ou a sua jurisdição.</span>
+      </p>
+      <a class="cta-btn" href="mailto:danny@abaxgrid.com?subject=Soluci%C3%B3n%20a%20la%20medida%20%E2%80%94%20AbaxGrid"><span data-es>Conversemos</span><span data-en>Let's talk</span><span data-pt>Vamos conversar</span></a>
+      <span class="mail">danny@abaxgrid.com</span>
+    </div>
+    <ul class="offer">
+      <li><b><span data-es>Simuladores de tu negocio</span><span data-en>Simulators of your business</span><span data-pt>Simuladores do seu negócio</span></b><span><span data-es>Tu modelo financiero convertido en un simulador para entrenar equipos, presentar a inversionistas o probar decisiones antes de tomarlas.</span><span data-en>Your financial model turned into a simulator to train teams, pitch investors or test decisions before you make them.</span><span data-pt>O seu modelo financeiro transformado em simulador para treinar equipes, apresentar a investidores ou testar decisões antes de tomá-las.</span></span></li>
+      <li><b><span data-es>Investigación legal por fecha</span><span data-en>Legal research by date</span><span data-pt>Pesquisa jurídica por data</span></b><span><span data-es>Un corpus de la normativa que te aplica, en cualquier país o sector, con su línea de tiempo y cada fuente citada.</span><span data-en>A corpus of the rules that apply to you, in any country or sector, with its timeline and every source cited.</span><span data-pt>Um acervo das normas que se aplicam a você, em qualquer país ou setor, com sua linha do tempo e cada fonte citada.</span></span></li>
+      <li><b><span data-es>Gestión tributaria y financiera</span><span data-en>Tax and finance management</span><span data-pt>Gestão tributária e financeira</span></b><span><span data-es>Calendarios, calculadoras, controles y reportes hechos para tus entidades y tus obligaciones.</span><span data-en>Calendars, calculators, controls and reports built for your entities and your obligations.</span><span data-pt>Calendários, calculadoras, controles e relatórios feitos para as suas entidades e obrigações.</span></span></li>
+    </ul>
+  </section>
+
+  <section class="band about" id="nosotros" aria-labelledby="ab-h">
+    <div>
+      <p class="eyebrow"><span data-es>Nosotros</span><span data-en>About</span><span data-pt>Sobre nós</span></p>
+      <h2 id="ab-h">Proactivados, S.A.</h2>
+    </div>
+    <div>
+      <p>
+        <span data-es><b>AbaxGrid es una marca de Proactivados, S.A.</b>, la empresa que diseña, desarrolla y opera CRUDO, GazettePro y TaxableApp.</span>
+        <span data-en><b>AbaxGrid is a brand of Proactivados, S.A.</b>, the company that designs, builds and runs CRUDO, GazettePro and TaxableApp.</span>
+        <span data-pt><b>AbaxGrid é uma marca da Proactivados, S.A.</b>, a empresa que projeta, desenvolve e opera CRUDO, GazettePro e TaxableApp.</span>
+      </p>
+      <p>
+        <span data-es>Fundada por Danny Peña, abogado y contador especializado en tributación de la inversión transfronteriza. Unimos derecho, finanzas y tecnología para que las decisiones de negocio se tomen con la ley y los números a la vista.</span>
+        <span data-en>Founded by Danny Peña, a lawyer and accountant specialized in the taxation of cross-border investment. We bring law, finance and technology together so business decisions are made with the law and the numbers in plain sight.</span>
+        <span data-pt>Fundada por Danny Peña, advogado e contador especializado na tributação do investimento transfronteiriço. Unimos direito, finanças e tecnologia para que as decisões de negócio sejam tomadas com a lei e os números à vista.</span>
+      </p>
+    </div>
+  </section>
+
   <footer>
-    <span>© <span id="y">2026</span> AbaxGrid · Danny Peña</span>
+    <span>© <span id="y">2026</span> Proactivados, S.A. · AbaxGrid</span>
   </footer>
 </div>
 <script>
