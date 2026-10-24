@@ -222,6 +222,8 @@ html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
     try{localStorage.setItem('abax-lang',l);}catch(e){}
   }
   var saved=null; try{saved=localStorage.getItem('abax-lang');}catch(e){}
+  var qs=(location.search.match(/[?&]lang=(es|en|pt)\b/)||[])[1]||(location.hash.match(/^#(es|en|pt)$/)||[])[1];
+  if(qs) saved=qs;
   var nav=(navigator.language||'es').slice(0,2);
   set(['es','en','pt'].indexOf(saved)>-1 ? saved : (nav==='en'||nav==='pt' ? nav : 'es'));
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.set);});});
