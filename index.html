@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AbaxGrid · Simula. Investiga. Cumple.</title>
-<meta name="description" content="Simuladores de negocio, investigación legal y gestión tributaria para América Latina: CRUDO, GazettePro y TaxableApp.">
+<meta name="description" content="Simuladores de negocio, investigación legal, gestión tributaria e inteligencia energética para América Latina: CRUDO, GazettePro, TaxableApp y The Energy Gazette.">
 <meta property="og:title" content="AbaxGrid · Simula. Investiga. Cumple.">
 <meta property="og:description" content="Simuladores de negocio, investigación legal y gestión tributaria para América Latina.">
 <meta property="og:url" content="https://abaxgrid.com/">
@@ -20,7 +20,7 @@
 <style>
 :root{
   --bg:#0d1014; --panel:#151a21; --line:#232b35; --text:#e9edf2; --muted:#8b96a5;
-  --crudo:#e0a33a; --taxable:#3fbf8f; --gazette:#e5736a; --accent:#7aa7ff;
+  --crudo:#e0a33a; --taxable:#3fbf8f; --gazette:#e5736a; --energy:#4fc1d6; --accent:#7aa7ff;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -47,7 +47,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:24p
 h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:14ch}
 .serious{font-style:normal;color:var(--accent)}
 .lead{color:var(--muted);font-size:clamp(16px,2.2vw,19px);max-width:56ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:24px 0 56px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;padding:24px 0 56px}
 .card{
   display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);
   border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
@@ -73,6 +73,10 @@ h1{font-size:clamp(34px,7vw,64px);line-height:1.05;margin:14px 0 18px;max-width:
   background:radial-gradient(circle at 50% 30%,#4a1f1c,#15100f 70%);
 }
 .thumb.gazette span{font:700 clamp(30px,5vw,48px) "Space Grotesk",sans-serif;color:var(--gazette);letter-spacing:-.02em}
+.thumb.energy{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:radial-gradient(circle at 50% 30%,#163a5b,#0b1622 72%)}
+.thumb.energy i{display:block;width:64px;height:5px;background:#c8102e}
+.thumb.energy span{font:700 clamp(24px,4.2vw,38px) "Space Grotesk",sans-serif;color:#fff;letter-spacing:.04em;text-align:center;line-height:1.05}
+.thumb.energy small{font:500 12px "IBM Plex Mono",monospace;color:var(--energy);letter-spacing:.2em;text-transform:uppercase}
 .soon-cta::after{content:none}
 .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
 .tag{font:500 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
@@ -122,7 +126,7 @@ html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
   </header>
 
   <section class="hero">
-    <p class="eyebrow"><span data-es>Simuladores · Investigación legal · Gestión tributaria</span><span data-en>Simulators · Legal research · Tax management</span><span data-pt>Simuladores · Pesquisa jurídica · Gestão tributária</span></p>
+    <p class="eyebrow"><span data-es>Simuladores · Investigación legal · Gestión tributaria · Inteligencia energética</span><span data-en>Simulators · Legal research · Tax management · Energy intelligence</span><span data-pt>Simuladores · Pesquisa jurídica · Gestão tributária · Inteligência energética</span></p>
     <h1><span data-es>Simula. Investiga. <em class="serious">Cumple.</em></span><span data-en>Simulate. Research. <em class="serious">Comply.</em></span><span data-pt>Simule. Pesquise. <em class="serious">Cumpra.</em></span></h1>
     <p class="lead">
       <span data-es>Simuladores de negocio, investigación legal y gestión tributaria para América Latina. Decisiones reales, con la ley y los números a la vista.</span>
@@ -169,6 +173,18 @@ html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
         <span class="cta"><span data-es>Abrir la app</span><span data-en>Open the app</span><span data-pt>Abrir o app</span></span>
       </div>
     </a>
+    <a class="card" href="/energygazette/" style="--c:var(--energy)">
+      <div class="thumb energy" aria-hidden="true"><i></i><span>THE ENERGY GAZETTE</span><small>Venezuela Edition</small></div>
+      <div class="body">
+        <span class="tag"><span data-es>Publicación · Energía en Venezuela</span><span data-en>Publication · Venezuela energy</span><span data-pt>Publicação · Energia na Venezuela</span></span>
+        <h2>The Energy Gazette</h2>
+        <p>
+          <span data-es>Inteligencia sobre la reapertura energética de Venezuela, con fuentes primarias: ediciones quincenales, línea de tiempo, mapa del sector y calculadora de participación fiscal.</span>
+          <span data-en>Intelligence on Venezuela's energy reopening, built on primary sources: biweekly issues, a living timeline, a sector map and a fiscal take calculator.</span><span data-pt>Inteligência sobre a reabertura energética da Venezuela, com fontes primárias: edições quinzenais, linha do tempo, mapa do setor e calculadora da participação fiscal.</span>
+        </p>
+        <span class="cta"><span data-es>Leer la Gazette</span><span data-en>Read the Gazette</span><span data-pt>Ler a Gazette</span></span>
+      </div>
+    </a>
   </main>
 
   <section class="band" id="soluciones" aria-labelledby="sol-h">
@@ -197,9 +213,9 @@ html[lang="en"] [data-en],html[lang="pt"] [data-pt]{display:revert}
     </div>
     <div>
       <p>
-        <span data-es><b>AbaxGrid es una marca de Proactivados, S.A.</b>, la empresa que diseña, desarrolla y opera CRUDO, GazettePro y TaxableApp.</span>
-        <span data-en><b>AbaxGrid is a brand of Proactivados, S.A.</b>, the company that designs, builds and runs CRUDO, GazettePro and TaxableApp.</span>
-        <span data-pt><b>AbaxGrid é uma marca da Proactivados, S.A.</b>, a empresa que projeta, desenvolve e opera CRUDO, GazettePro e TaxableApp.</span>
+        <span data-es><b>AbaxGrid es una marca de Proactivados, S.A.</b>, la empresa que diseña, desarrolla y opera CRUDO, GazettePro, TaxableApp y The Energy Gazette.</span>
+        <span data-en><b>AbaxGrid is a brand of Proactivados, S.A.</b>, the company that designs, builds and runs CRUDO, GazettePro, TaxableApp and The Energy Gazette.</span>
+        <span data-pt><b>AbaxGrid é uma marca da Proactivados, S.A.</b>, a empresa que projeta, desenvolve e opera CRUDO, GazettePro, TaxableApp e The Energy Gazette.</span>
       </p>
       <p>
         <span data-es>Fundada por Danny Peña, abogado y contador especializado en tributación de la inversión transfronteriza. Unimos derecho, finanzas y tecnología para que las decisiones de negocio se tomen con la ley y los números a la vista.</span>
